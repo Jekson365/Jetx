@@ -4,208 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./planet.css">
     <title>Document</title>
 </head>
-<style>
-    @import url("//cdn.web-fonts.ge/fonts/alk-rex-bold/css/alk-rex-bold.min.css");
-
-    * {
-        font-family: "ALK Rex Bold", sans-serif !important;
-    }
-
-    body {
-        background-color: rgb(9, 13, 61);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-
-    .cover {
-        display: flex;
-        align-items: flex-start;
-        max-width: 400px;
-        width: 100%;
-        height: 800px;
-        background-color: red;
-        position: relative;
-    }
-
-    #mode {
-        width: 400px;
-        height: 800px;
-        background-color: rgb(255, 255, 255);
-        background-image: url('/back.jpg');
-        animation: anim 40s linear infinite;
-    }
-
-    .ufo {
-        position: absolute;
-        bottom: 90px;
-        width: 150px;
-        left: 50%;
-    }
-
-    @keyframes anim {
-        0% {
-            background-position: 0 0;
-        }
-
-        100% {
-            background-position: 0 100%;
-        }
-    }
-
-    #counter {
-        position: absolute;
-        top: 200px;
-        left: 50%;
-        color: white;
-        font-size: 50px;
-        transform: translate(-50%, 0);
-        font-family: sans-serif;
-    }
-
-    .buttons {
-
-        position: absolute;
-        bottom: 0;
-        width: 95%;
-        gap: 20px;
-        align-items: center;
-        justify-content: center;
-        height: 50px;
-        margin-bottom: 10px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        display: flex;
-
-    }
-
-    .buttons .count-int {
-        width: 20%;
-        height: 100%;
-    }
-
-    .buttons button {
-        width: 80%;
-        background-color: transparent;
-        border: 0;
-        height: 100%;
-        outline: 0;
-    }
-
-    .count-int input {
-        padding-left: 5px;
-        border-radius: 5px;
-        width: 100%;
-        height: 100%;
-        outline: 0;
-        border: 0;
-        color: white;
-        background-color: rgb(255, 255, 255, 0.3);
-    }
-
-    .count-int input::placeholder {
-        color: white;
-    }
-
-    .buttons button {
-        font-size: 30px;
-        color: white;
-        border-radius: 5px;
-        border: 0;
-        font-family: sans-serif;
-        background-color: rgb(60, 190, 56);
-        cursor: pointer;
-    }
-
-    .bas {
-        position: absolute;
-        top: 20px;
-        left: 100px;
-
-    }
-
-    .bas button {
-
-        width: 200px;
-        height: 100px;
-    }
-
-    .shortcuts {
-        position: absolute;
-        bottom: 80px;
-        left: 50%;
-        width: 100%;
-        gap: 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transform: translate(-50%, 0);
-    }
-
-    .shortcuts button {
-        color: white;
-        padding: 3px 17px;
-        cursor: pointer;
-        color: white;
-        border: 0;
-        border-radius: 20px;
-    }
-
-    .c {
-        background-color: rgb(60, 190, 56);
-    }
-
-    .a {
-        background-color: rgb(9, 151, 4);
-    }
-
-    .red-button {
-        background-color: red !important;
-    }
-
-    .red-color {
-        color: red !important;
-    }
-
-    .history {
-
-        position: absolute;
-        right: -320px;
-        width: 300px;
-
-    }
-    .balance {
-        position: absolute;
-        left: -130px;
-        color: white;
-        width: 300px;
-    }
-
-    .box {
-        color: white;
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        padding-left: 20px;
-        border-radius: 5px;
-        border-bottom: 2px solid greenyellow;
-        background-color: rgba(255, 255, 255, 0.075);
-        height: 50px;
-    }
-</style>
 
 <body>
+    <div class="balance">
+        <h1 id="bal">0 ლ</h1>
+    </div>
     <div class="cover">
-        <div class="balance">
-            <h1 id="bal">0 ლ</h1>
-        </div>
         <h1 id="counter">
             0x
         </h1>
-        <img src="./ufo.png" alt="" class="ufo" id="ufo">
+        <img src="./assets/ufo.png" alt="" class="ufo" id="ufo">
+        <img src="./assets/mars.png" alt="" class="mars">
+        <img src="./assets/venus.png" alt="" class="venus">
         <canvas id="mode">
         </canvas>
         <div class="shortcuts">
@@ -225,7 +39,9 @@
         <div class="history">
         </div>
     </div>
-    <script src="main.js"></script>
+
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/planetAnimation.js"></script>
 </body>
 
 </html>

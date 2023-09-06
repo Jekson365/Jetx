@@ -1,0 +1,19 @@
+.venus ,.mars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    box-shadow: 0 0 40px 1px rgb(255, 132, 0);
+    border-radius: 50%;
+    animation: rotPlanet 5s linear infinite;
+    
+}
+.venus {
+    width: 80px;
+}
+@keyframes rotPlanet {
+    0% {
+        transform: rotate(0);
+    }
+    100% {transform: rotate(360deg);}
+}
